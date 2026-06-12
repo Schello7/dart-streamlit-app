@@ -1,8 +1,13 @@
+"""
+# My first app
+Here's our first attempt at using data to create a table:
+"""
+
 import streamlit as st
+import pandas as pd
+df = pd.DataFrame({
+  'first column': [1, 2, 3, 4],
+  'second column': [10, 20, 30, 40]
+})
 
-st.title("My first Dart-App")
-
-page = st.sidebar.selectbox("Navigation", ["Players", "Matches"])
-
-if page == "Players":
-    import pages.players
+df
