@@ -2,11 +2,7 @@ import streamlit as st
 
 st.title("My first Dart-App")
 
-pages = {
-  "Account Settings": [
-    st.Page("pages/players.py", title="Add new players"),
-  ],
-}
+page = st.sidebar.selectbox("Navigation", ["Players", "Matches"])
 
-pg = st.navigation(pages)
-pg.run()
+if page == "Players":
+    import pages.players
