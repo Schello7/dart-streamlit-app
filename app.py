@@ -6,9 +6,6 @@ pages = {
   "Account Settings": [
     st.Page("pages/players.py", title="Add new players"),
   ],
-  "Matches": [
-    
-  ],
 }
 
 pg = st.navigation(pages)
