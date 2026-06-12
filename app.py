@@ -2,7 +2,14 @@ import streamlit as st
 
 st.title("My first Dart-App")
 
-player = st.text_input("Player Name")
+pages = {
+  "Account Settings": [
+    st.Page("pages/players.py", title="Add new players"),
+  ],
+  "Matches": [
+    
+  ],
+}
 
-if player:
-  st.success(f"Hallo {player}")
+pg = st.navigation(pages)
+pg.run()
